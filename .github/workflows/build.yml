@@ -1,5 +1,8 @@
 name: Build APK
-on: push
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:   # allows manual triggering
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -9,13 +12,15 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
-      - uses: android-actions/setup-android@v3
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
         with:
           api-level: 34
           build-tools: 34.0.0
       - name: Build debug APK
         run: ./gradlew assembleDebug
-      - uses: actions/upload-artifact@v4
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
         with:
-          name: cats-ear-debug
+          name: CatsEar-debug
           path: app/build/outputs/apk/debug/app-debug.apk
