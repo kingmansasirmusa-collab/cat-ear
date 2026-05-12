@@ -1,4 +1,3 @@
-```kotlin
 package com.yourapp.catsear
 
 import kotlin.math.*
@@ -62,4 +61,3 @@ class SoundLocator(private val micDistanceMeters: Float = 0.12f) {
         return (2000f / (rms + 1e-6f)).coerceIn(0.5f, 10f)
     }
 }
-```
