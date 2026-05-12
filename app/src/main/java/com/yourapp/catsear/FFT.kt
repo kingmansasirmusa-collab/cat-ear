@@ -1,4 +1,3 @@
-```kotlin
 package com.yourapp.catsear
 
 import kotlin.math.*
@@ -71,4 +70,3 @@ object FFT {
         }
     }
 }
-```
