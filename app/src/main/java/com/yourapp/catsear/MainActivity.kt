@@ -1,4 +1,3 @@
-```kotlin
 package com.yourapp.catsear
 
 import android.Manifest
@@ -153,4 +152,3 @@ class MainActivity : AppCompatActivity() {
     }
     */
 }
-```
