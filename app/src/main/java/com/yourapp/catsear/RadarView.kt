@@ -1,4 +1,3 @@
-```kotlin
 package com.yourapp.catsear
 
 import android.content.Context
@@ -41,4 +40,3 @@ class RadarView(context: Context, attrs: AttributeSet?) : View(context, attrs) {
         }
     }
 }
-```
